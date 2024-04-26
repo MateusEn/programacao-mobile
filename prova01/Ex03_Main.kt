@@ -21,7 +21,7 @@ fun main() {
     // Itera sobre a lista de animais e exibe informações sobre cada um
     for (animal in animais) {
         // Exibe informações gerais sobre o animal
-        println("Nome: ${animal.nome}, Idade: ${animal.idade}, Som: ${animal.som}, Número de patas: ${animal.num_patas}")
+        println("Nome: ${animal.nome}, Idade: ${animal.idade}, Som: ${animal.som}, Número de patas/pés: ${animal.num_patas}")
         // Chama o método fazerSom do animal
         animal.fazerSom()
         // Verifica o tipo do animal e chama seus métodos respectivos
