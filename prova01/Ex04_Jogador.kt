@@ -1,10 +1,19 @@
-// Exercício 4 - Integrantes: Danilo Augusto Plusek e Mateus Enrico Codognotto
+/*
+    Ex04 - Crie uma classe Carta que represente uma carta de baralho com atributos como naipe e valor. Crie
+    uma classe Baralhoque represente um baralho de cartas completo. Implemente métodos para
+    embaralhar o baralho, distribuir cartas. Entregue 5 cartas para um Jogador que vai verificar se as
+    cartas possuem combinações vencedoras.
 
+    Equipe: Danilo Augusto Plusek e Mateus Enrico Codognotto
+*/
+
+// Classe do jogador, contém a função de verificar combinações
 class Jogador(val nome: String) {
+    // Função para verificar combinações
     fun verificarCombinacoes(cartas: List<Carta>) {
         val valores = cartas.groupBy { it.valor }
 
-        // Verificar pares
+        // Verifica se tem pares
         val pares = valores.filterValues { it.size == 2 }
         if (pares.isNotEmpty()) {
             println("Pares encontrados:")
@@ -16,7 +25,7 @@ class Jogador(val nome: String) {
             println("Nenhum par encontrado.")
         }
 
-        // Verificar trincas
+        // Verifica se tem trincas
         val trincas = valores.filterValues { it.size == 3 }
         if (trincas.isNotEmpty()) {
             println("Trincas encontradas:")
@@ -28,7 +37,7 @@ class Jogador(val nome: String) {
             println("Nenhuma trinca encontrada.")
         }
 
-        // Verificar full house
+        // Verifica se tem full house
         if (pares.isNotEmpty() && trincas.isNotEmpty()) {
             println("Full house encontrado!")
             val cartasDoFullHouse = cartas.filter { it.valor in pares.keys + trincas.keys }
@@ -37,7 +46,7 @@ class Jogador(val nome: String) {
             println("Nenhum full house encontrado.")
         }
 
-        // Verificar flush
+        // Verifica se tem flush
         val naipes = cartas.map { it.naipe }.toSet()
         if (naipes.size == 1) {
             println("Flush encontrado!")
@@ -58,7 +67,7 @@ fun main() {
         Carta("♥️", "3")
     )
 
-    val jogador = Jogador("Alice")
+    val jogador = Jogador("Chauã")
     jogador.verificarCombinacoes(cartas)
 }
 //Combinações possíveis:

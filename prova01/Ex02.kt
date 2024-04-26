@@ -1,4 +1,10 @@
-// Exercício 2 - Integrantes: Danilo Augusto Plusek e Mateus Enrico Codognotto
+/*
+    Ex02 - Escreva um programa que dado um inteiro positivo n, calcule e imprima o valor da seguinte soma:
+    f(n) = (1/n) + (2 /n-1) + (3/n-2) + ... + (n/1)
+
+    Equipe: Danilo Augusto Plusek e Mateus Enrico Codognotto
+*/
+
 abstract class Ex02 {
     // Variável para armazenar o número fornecido pelo usuário
     public abstract var n: Int

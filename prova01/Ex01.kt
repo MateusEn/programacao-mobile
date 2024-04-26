@@ -1,4 +1,11 @@
-// Exercício 1 - Integrantes: Danilo Augusto Plusek e Mateus Enrico Codognotto
+/*
+    Ex01 - Escreva um programa que leia um número entre 1 e 12 correspondendo a um mês do ano e
+    imprima o nome desse mês. Utilize o comando when. Caso o valor seja fora deste
+    intevalo, imprima uma mensagem de erro.
+
+    Equipe: Danilo Augusto Plusek e Mateus Enrico Codognotto
+*/
+
 abstract class Ex01 {
     public abstract var entrada: Int
 }
