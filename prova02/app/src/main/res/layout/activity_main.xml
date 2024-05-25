@@ -83,13 +83,14 @@
             app:layout_constraintEnd_toStartOf="@+id/btnTranslation"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView">
+            app:layout_constraintTop_toBottomOf="@+id/scrollView"
+            app:layout_constraintHeight_max="150dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite o texto a ser traduzido" />
+                android:hint="Digite o texto a ser traduzido"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
